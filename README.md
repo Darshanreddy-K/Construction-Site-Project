@@ -37,3 +37,11 @@ You can easily run this platform inside a Docker container.
 1. **Build the Docker Image:**
    ```bash
    docker build -t construction-platform:latest .
+
+1. Run the Container (connected to host PostgreSQL):
+
+Bash
+docker run -p 8080:8080 -e SPRING_DATASOURCE_URL=jdbc:postgresql://host.docker.internal:5432/construction_db construction-platform:latest
+
+📌 Status
+Completed and fully verified. Ready for enterprise deployment and portfolio showcasing.
